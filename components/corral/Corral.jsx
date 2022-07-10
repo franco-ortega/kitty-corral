@@ -2,20 +2,21 @@ import { useEffect, useState } from 'react';
 import Slot from '../slot/Slot';
 import styles from './Corral.module.css';
 
-const Corral = ({ corralCount }) => {
-  const [occupied, setOccupied] = useState(false);
+const Corral = ({ corralCount, occupied, setOccupied }) => {
+  // const [occupied, setOccupied] = useState(false);
 
   console.log(corralCount);
   console.log(occupied);
 
   const slotsToDisplay = [];
   for (let i = 0; i < corralCount; i++) {
-    slotsToDisplay.push(<Slot key={i} occupied={occupied} />);
+    slotsToDisplay.push(<Slot key={i} occupied={occupied} setOccupied={setOccupied} />);
   }
   const onAddKittyClick = () => {
-    setOccupied((prevState) => !prevState);
+    setOccupied(true);
   };
 
+  console.log(slotsToDisplay)
   return (
     <div className={styles.Corral}>
       <div>{slotsToDisplay}</div>
