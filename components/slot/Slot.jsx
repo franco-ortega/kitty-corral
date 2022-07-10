@@ -1,9 +1,11 @@
 import Kitty from '../kitty/Kitty';
 import styles from './Slot.module.css';
 
-const Slot = () => {
+const Slot = ({ occupied }) => {
+    const display = occupied ? <Kitty /> : null
+    console.log('SLOT: ', occupied)
   return <div className={styles.Slot}>
-    <Kitty />
+    {display}
   </div>;
 };
 

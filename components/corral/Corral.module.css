@@ -3,7 +3,9 @@
   border: 1rem solid lightblue;
 
   padding: 1rem;
+}
 
+.Corral div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
