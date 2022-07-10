@@ -2,8 +2,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import styles from './Kitty.module.css';
 
-const Kitty = ({occupied,  setOccupied }) => {
-  const [occupyHere, setOccupyHere] = useState(true);
+const Kitty = ({ occupied }) => {
+  const [occupyHere, setOccupyHere] = useState(occupied);
 
   const onOccupiedClick = () => {
     setOccupyHere(false);
