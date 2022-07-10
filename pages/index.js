@@ -1,8 +1,9 @@
 import Head from 'next/head';
-import Corral from '../components/corral/Corral';
+import Home from '../components/home/Home';
+// import Corral from '../components/corral/Corral';
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className={styles.container}>
       <Head>
@@ -12,7 +13,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <Corral />
+        Home Page
+        <Home />
       </main>
     </div>
   )
