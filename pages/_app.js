@@ -3,16 +3,19 @@ import Layout from '../components/layout/Layout';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
-  const [corralSize, setCorralSize] = useState(0);
+  const [corralCount, setCorralCount] = useState(0);
+  const [occupied, setOccupied] = useState(false);
 
-  console.log('LAYOUT: ', corralSize);
+  // console.log('LAYOUT: ', corralCount);
 
   return (
     <Layout>
       <Component
         {...pageProps}
-        corralSize={corralSize}
-        setCorralSize={setCorralSize}
+        corralCount={corralCount}
+        setCorralCount={setCorralCount}
+        occupied={occupied}
+        setOccupied={setOccupied}
       />
     </Layout>
   );

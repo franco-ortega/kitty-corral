@@ -1,8 +1,8 @@
 import Router from 'next/router';
 import styles from './Home.module.css';
 
-const Home = ({ setCorralSize }) => {
-  const onCorralSizeSubmit = (e) => {
+const Home = ({ setCorralCount }) => {
+  const onCorralCountSubmit = (e) => {
     e.preventDefault();
     Router.push('/corral');
   };
@@ -14,9 +14,9 @@ const Home = ({ setCorralSize }) => {
         <input
           placeholder="0"
           type="number"
-          onChange={(e) => setCorralSize(e.target.value)}
+          onChange={(e) => setCorralCount(e.target.value)}
         />
-        <button onClick={onCorralSizeSubmit}>Submit</button>
+        <button onClick={onCorralCountSubmit}>Submit</button>
       </form>
     </div>
   );

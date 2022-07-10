@@ -1,5 +1,5 @@
 import Home from '../components/home/Home';
 
-export default function HomePage({ setCorralSize }) {
-  return <Home setCorralSize={setCorralSize} />;
+export default function HomePage({ setCorralCount }) {
+  return <Home setCorralCount={setCorralCount} />;
 }
