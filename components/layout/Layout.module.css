@@ -1,0 +1,5 @@
+.Layout {
+  border: 1rem solid lightgray;
+  height: 100vh;
+  overflow: auto;
+}
