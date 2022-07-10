@@ -1,0 +1,10 @@
+.Slot {
+  background-color: mediumaquamarine;
+  width: 7rem;
+  aspect-ratio: 1;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
