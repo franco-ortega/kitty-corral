@@ -11,7 +11,11 @@ const Home = ({ setCorralSize }) => {
     <div className={styles.Home}>
       <h2>Landing Page</h2>
       <form action="">
-        <input type="number" onChange={(e) => setCorralSize(e.target.value)} />
+        <input
+          placeholder="0"
+          type="number"
+          onChange={(e) => setCorralSize(e.target.value)}
+        />
         <button onClick={onCorralSizeSubmit}>Submit</button>
       </form>
     </div>
