@@ -2,25 +2,18 @@ import { useEffect, useState } from 'react';
 import Kitty from '../kitty/Kitty';
 import styles from './Corral.module.css';
 
-const Corral = () => {
-  const [kittyAmount, setKittyAmount] = useState(Math.floor(Math.random() * 20) + 1);
+const Corral = ({ corralSize }) => {
+  const [kittyAmount, setKittyAmount] = useState(corralSize);
   const [kittyList, setKittyList] = useState([]);
 
-console.log(kittyAmount, kittyList)
-  
-useEffect(() => {
-  setKittyList(Array(kittyAmount).fill(null));
-  }, [kittyAmount]);
+  if(!kittyList.length) {
+    for (let i = 0; i < kittyAmount; i++) {
+      kittyList.push(<Kitty key={i} />);
+      console.log('LOOP: ', i);
+    }
+  }
 
-  const kittiesToDisplay = kittyList.map((kitty, i) => (
-    <Kitty key={i}/>
-  ));
-
-  return (
-    <div className={styles.Corral}>
-      {kittiesToDisplay}
-    </div>
-  );
+  return <div className={styles.Corral}>{kittyList}</div>;
 };
 
 export default Corral;
