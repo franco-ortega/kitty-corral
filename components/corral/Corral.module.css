@@ -6,8 +6,10 @@
 }
 
 .Corral div {
+  margin-block: 0.5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: .5rem;
+  justify-content: center;
+  gap: 0.5rem;
 }
