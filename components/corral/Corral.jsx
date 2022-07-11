@@ -2,34 +2,27 @@ import { useEffect, useState } from 'react';
 import Slot from '../slot/Slot';
 import styles from './Corral.module.css';
 
-const Corral = ({
-  corralCount,
-  // occupied,
-  // setOccupied
-}) => {
-  const slotsToDisplay = [];
-  for (let i = 0; i < corralCount; i++) {
-    slotsToDisplay.push(
-      <Slot
-        key={i}
-        // occupied={occupied}
-        // setOccupied={setOccupied}
-      />
-    );
-  }
-  const onAddKittyClick = () => {
-    // setOccupied((prevState) => !prevState);
-    console.log('add one kitty')
-  };
+const Corral = ({ corralCount }) => {
+  const [slots, setSlots] = useState([]);
 
-  console.log(slotsToDisplay);
+  useEffect(() => {
+    const slotsToDisplay = [];
+    for (let i = 0; i < corralCount; i++) {
+      slotsToDisplay.push(<Slot key={i} />);
+    }
+    setSlots(slotsToDisplay);
+  }, [corralCount]);
+
+  // const onAddKittyClick = () => {
+  //   console.log('add one kitty');
+  // };
+
   return (
     <div className={styles.Corral}>
-      <div>{slotsToDisplay}</div>
-      <button onClick={onAddKittyClick}>
-        Add Kitty
-        {/* {!occupied ? 'Add Kitties' : 'Remove Kitties'} */}
-      </button>
+      <div>{slots}</div>
+      {/* <button onClick={onAddKittyClick}> */}
+      {/* {!occupied ? 'Add Kitties' : 'Remove Kitties'} */}
+      {/* </button> */}
     </div>
   );
 };

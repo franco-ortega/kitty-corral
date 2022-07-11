@@ -11,7 +11,7 @@ const useKitty = () => {
     setOccupied(false);
   };
 
-  const move = () => {
+  const toggle = () => {
     setOccupied((prevState) => !prevState);
   };
 
@@ -19,7 +19,7 @@ const useKitty = () => {
     occupied,
     enter,
     exit,
-    move,
+    toggle,
   };
 };
 
