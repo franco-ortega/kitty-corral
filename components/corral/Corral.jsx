@@ -18,7 +18,8 @@ const Corral = ({
     );
   }
   const onAddKittyClick = () => {
-    setOccupied((prevState) => !prevState);
+    // setOccupied((prevState) => !prevState);
+    console.log('add one kitty')
   };
 
   console.log(slotsToDisplay);
