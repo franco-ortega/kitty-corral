@@ -19,7 +19,9 @@ const Corral = ({ corralCount }) => {
 
   return (
     <div className={styles.Corral}>
+      <p>Click on an empty space to add a kitty.</p>
       <div>{slots}</div>
+      <p>Click on an occupied space to remove a kitty.</p>
       {/* <button onClick={onAddKittyClick}> */}
       {/* {!occupied ? 'Add Kitties' : 'Remove Kitties'} */}
       {/* </button> */}
