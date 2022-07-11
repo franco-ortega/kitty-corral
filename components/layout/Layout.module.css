@@ -1,5 +1,12 @@
 .Layout {
-  border: 1rem solid lightgray;
+  border: .5rem solid lightgray;
+  background-color: lightgreen;
   height: 100vh;
+  padding: .5rem;
+  text-align: center;
   overflow: auto;
+}
+
+.Layout main {
+  padding-top: 2rem;
 }
