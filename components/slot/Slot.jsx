@@ -3,16 +3,16 @@ import Kitty from '../kitty/Kitty';
 import styles from './Slot.module.css';
 
 const Slot = () => {
-  const [displayKitty, setDisplayKitty] = useState(false);
+  const [occupied, setOccupied] = useState(false);
 
-  const onDisplayKittyClick = () => {
-    setDisplayKitty((prevState) => !prevState);
+  const onOccupiedClick = () => {
+    setOccupied((prevState) => !prevState);
   };
 
-  const display = displayKitty ? <Kitty occupied={displayKitty} /> : null;
+  const display = occupied ? <Kitty occupied={occupied} /> : null;
 
   return (
-    <div className={styles.Slot} onClick={onDisplayKittyClick}>
+    <div className={styles.Slot} onClick={onOccupiedClick}>
       {display}
     </div>
   );
