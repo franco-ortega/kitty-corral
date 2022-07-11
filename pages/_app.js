@@ -6,8 +6,6 @@ function MyApp({ Component, pageProps }) {
   const [corralCount, setCorralCount] = useState(0);
   const [occupied, setOccupied] = useState(false);
 
-  // console.log('LAYOUT: ', corralCount);
-
   return (
     <Layout>
       <Component
