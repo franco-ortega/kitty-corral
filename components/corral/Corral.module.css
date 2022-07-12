@@ -2,14 +2,27 @@
   background-color: orange;
   border: 1rem solid lightblue;
 
-  padding: 1rem;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.Corral div {
-  margin-block: 0.5rem;
+.Corral section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  /* border: 1px dashed blue; */
+}
+
+.Corral section > div {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
+  /* border: 3px dotted yellow; */
 }

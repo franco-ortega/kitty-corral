@@ -1,6 +1,6 @@
 .Slot {
-  background-color: mediumaquamarine;
-  width: 7rem;
+  background-color: hsl(110, 51%, 25%);
+  width: 6rem;
   aspect-ratio: 1;
 
   display: flex;
