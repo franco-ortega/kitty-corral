@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react';
+import CorralSpace from '../CorralSpace/CorralSpace';
 import Kitty from '../kitty/Kitty';
-import Slot from '../slot/Slot';
 import styles from './Corral.module.css';
 
 const Corral = ({ corralCount }) => {
-  const [slots, setSlots] = useState([]);
+  const [corralSpaces, setCorralSpaces] = useState([]);
 
   useEffect(() => {
-    const slotsToDisplay = [];
+    const corralSpacesCreated = [];
     for (let i = 0; i < corralCount; i++) {
-      slotsToDisplay.push(false);
+      corralSpacesCreated.push(false);
     }
-    setSlots(slotsToDisplay);
+    setCorralSpaces(corralSpacesCreated);
   }, [corralCount]);
 
   const onAddKittyClick = () => {
     console.log('add one kitty');
-    setSlots((prevState) => {
+    setCorralSpaces((prevState) => {
       return prevState.map((item, i) => {
         if (
           !item &&
@@ -41,28 +41,32 @@ const Corral = ({ corralCount }) => {
   };
 
   const onEmptyCorralClick = () => {
-    setSlots((prevState) => prevState.map((item) => false));
+    setCorralSpaces((prevState) => prevState.map((item) => false));
   };
 
   return (
     <div className={styles.Corral}>
       <section>
         <div>
-          {slots.map((item, i) => {
+          {corralSpaces.map((item, i) => {
             if (item) {
-              return <Kitty key={i} />;
+              return (
+                <CorralSpace key={i}>
+                  <Kitty />
+                </CorralSpace>
+              );
             } else {
-              return <Slot key={i} />;
+              return <CorralSpace key={i}></CorralSpace>;
             }
           })}
         </div>
         <button
           onClick={onAddKittyClick}
-          disabled={slots.every((item) => item)}
+          disabled={corralSpaces.every((item) => item)}
         >
           Add Kitty
         </button>
-        {slots.every((item) => item) && (
+        {corralSpaces.every((item) => item) && (
           <>
             <p>The Kitty Corral is full.</p>
             <button onClick={onEmptyCorralClick}>Empty Corral</button>
