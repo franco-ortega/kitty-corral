@@ -23,35 +23,13 @@ const Corral = ({ corralCount }) => {
     console.log('add one kitty');
     setCorralSpaces((prevState) => {
       return prevState.map((corralSpace, i) => {
-        if (prevState[i - 1] === undefined) {
-          console.log('A');
-          return (
-            <CorralSpace key={i}>
-              <Kitty
-                occupied={corralSpace}
-                i={i}
-                setCorralSpaces={setCorralSpaces}
-              />
-            </CorralSpace>
-          );
-        }
         if (
-          prevState[i - 1].props.children &&
-          !prevState[i + 1]?.props.children
+          !prevState[i - 1] ||
+          (prevState[i - 1].props.children &&
+            !prevState[i + 1]?.props.children) ||
+          (prevState[i - 1].props.children && !prevState[i + 1])
         ) {
-          console.log('B');
-          return (
-            <CorralSpace key={i}>
-              <Kitty
-                occupied={corralSpace}
-                i={i}
-                setCorralSpaces={setCorralSpaces}
-              />
-            </CorralSpace>
-          );
-        }
-        if (prevState[i - 1].props.children && prevState[i + 1] === undefined) {
-          console.log('C');
+          console.log('A');
           return (
             <CorralSpace key={i}>
               <Kitty
@@ -68,7 +46,9 @@ const Corral = ({ corralCount }) => {
   };
 
   const onEmptyCorralClick = () => {
-    setCorralSpaces((prevState) => prevState.map((item, i) => <CorralSpace key={i} />));
+    setCorralSpaces((prevState) =>
+      prevState.map((item, i) => <CorralSpace key={i} />)
+    );
   };
 
   console.log(corralSpaces);
