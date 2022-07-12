@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
+import CorralSpace from '../CorralSpace/CorralSpace';
 import styles from './Kitty.module.css';
 
 const Kitty = ({ occupied, i, setCorralSpaces }) => {
@@ -10,7 +11,7 @@ const Kitty = ({ occupied, i, setCorralSpaces }) => {
     setVisible(false);
     setCorralSpaces((prevState) =>
       prevState.map((space) => {
-        prevState[i] = false;
+        prevState[i] = <CorralSpace key={i} />;
         return space;
       })
     );
