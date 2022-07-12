@@ -3,14 +3,17 @@ import { useState } from 'react';
 import styles from './Kitty.module.css';
 
 const Kitty = ({ occupied }) => {
-  const [occupyHere, setOccupyHere] = useState(occupied);
+  const [occupyHere, setOccupyHere] = useState(true);
 
   const onOccupyHereClick = () => {
     setOccupyHere(false);
   };
   return (
-    <div className={styles.Kitty} onClick={onOccupyHereClick}>
-      {occupyHere && occupied && (
+    <div
+      className={styles.Kitty}
+      // onClick={onOccupyHereClick}
+    >
+      {occupyHere && (
         <Image
           src="https://placekitten.com/100/100"
           alt="kitten"

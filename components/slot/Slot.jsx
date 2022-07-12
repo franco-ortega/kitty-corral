@@ -12,7 +12,7 @@ const Slot = () => {
   const display = occupied ? <Kitty occupied={occupied} /> : null;
 
   return (
-    <div className={styles.Slot} onClick={onOccupiedClick}>
+    <div className={styles.Slot}>
       {display}
     </div>
   );
