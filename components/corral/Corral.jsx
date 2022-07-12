@@ -16,21 +16,17 @@ const Corral = ({ corralCount }) => {
   }, [corralCount]);
 
   const onAddKittyClick = () => {
-    console.log('add one kitty');
     setCorralSpaces((prevState) => {
       let length = 0;
 
       prevState.find((corralSpace, i) => {
         if (!corralSpace.props.children) {
-          console.log('HELLO: ', i);
           length = i;
           return corralSpace;
         }
-        console.log('LENGTH for each: ', length);
       });
 
       return prevState.map((corralSpace, i) => {
-        console.log('LENGTH map: ', length);
         if (i === length)
           return (
             <CorralSpace key={i}>
@@ -47,8 +43,6 @@ const Corral = ({ corralCount }) => {
       prevState.map((space, i) => <CorralSpace key={i} />)
     );
   };
-
-  console.log(corralSpaces);
 
   return (
     <div className={styles.Corral}>
