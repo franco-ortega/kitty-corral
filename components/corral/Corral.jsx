@@ -8,10 +8,6 @@ const Corral = ({ corralCount }) => {
   const [corralSpaces, setCorralSpaces] = useState([]);
 
   useEffect(() => {
-    // const corralSpacesCreated = [];
-    // for (let i = 0; i < corralCount; i++) {
-    //   corralSpacesCreated.push(false);
-    // }
     const corralSpacesCreated = [];
     for (let i = 0; i < corralCount; i++) {
       corralSpacesCreated.push(<CorralSpace key={i} />);
