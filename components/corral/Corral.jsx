@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import CorralSpace from '../CorralSpace/CorralSpace';
 import Kitty from '../kitty/Kitty';
@@ -72,6 +73,9 @@ const Corral = ({ corralCount }) => {
             <button onClick={onEmptyCorralClick}>Empty Corral</button>
           </>
         )}
+        <div>
+          <Link href='/'>Return Home</Link>
+        </div>
       </section>
     </div>
   );

@@ -26,3 +26,16 @@
   gap: 1rem;
   /* border: 3px dotted yellow; */
 }
+
+.Corral a {
+  border: 1px solid blue;
+  background-color: blue;
+  padding: .25rem;
+  color: yellow;
+  transition: 500ms;
+}
+
+.Corral a:hover {
+  background-color: transparent;
+  color: black;
+}
