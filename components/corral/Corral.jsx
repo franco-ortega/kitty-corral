@@ -18,20 +18,25 @@ const Corral = ({ corralCount }) => {
   const onAddKittyClick = () => {
     console.log('add one kitty');
     setCorralSpaces((prevState) => {
+      let length = 0;
+
+      prevState.find((corralSpace, i) => {
+        if (!corralSpace.props.children) {
+          console.log('HELLO: ', i);
+          length = i;
+          return corralSpace;
+        }
+        console.log('LENGTH for each: ', length);
+      });
+
       return prevState.map((corralSpace, i) => {
-        if (
-          !prevState[i - 1] ||
-          (prevState[i - 1].props.children &&
-            !prevState[i + 1]?.props.children) ||
-          (prevState[i - 1].props.children && !prevState[i + 1])
-        ) {
-          console.log('A');
+        console.log('LENGTH map: ', length);
+        if (i === length)
           return (
             <CorralSpace key={i}>
               <Kitty i={i} setCorralSpaces={setCorralSpaces} />
             </CorralSpace>
           );
-        }
         return corralSpace;
       });
     });
@@ -39,7 +44,7 @@ const Corral = ({ corralCount }) => {
 
   const onEmptyCorralClick = () => {
     setCorralSpaces((prevState) =>
-      prevState.map((item, i) => <CorralSpace key={i} />)
+      prevState.map((space, i) => <CorralSpace key={i} />)
     );
   };
 
@@ -48,14 +53,14 @@ const Corral = ({ corralCount }) => {
   return (
     <div className={styles.Corral}>
       <section>
-        <div>{corralSpaces.map((item) => item)}</div>
+        <div>{corralSpaces.map((space) => space)}</div>
         <button
           onClick={onAddKittyClick}
-          // disabled={corralSpaces.every((item) => item)}
+          disabled={corralSpaces.every((space) => space.props.children)}
         >
           Add Kitty
         </button>
-        {corralSpaces.every((item) => item.props?.children) && (
+        {corralSpaces.every((space) => space.props?.children) && (
           <>
             <p>The Kitty Corral is full.</p>
             <button onClick={onEmptyCorralClick}>Empty Corral</button>
