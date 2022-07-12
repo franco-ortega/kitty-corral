@@ -15,6 +15,7 @@ const Home = ({ setCorralCount }) => {
         <input
           placeholder="0"
           type="number"
+          min="0"
           onChange={(e) => setCorralCount(e.target.value)}
         />
         <button>Submit</button>
