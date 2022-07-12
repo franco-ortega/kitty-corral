@@ -23,21 +23,25 @@ const Corral = ({ corralCount }) => {
           prevState[i - 1] === undefined &&
           prevState[i + 1] === false
         ) {
-          item = true;
+          return true;
         }
         if (!item && prevState[i - 1] === true && prevState[i + 1] === false) {
-          item = true;
+          return true;
         }
         if (
           !item &&
           prevState[i - 1] === true &&
           prevState[i + 1] === undefined
         ) {
-          item = true;
+          return true;
         }
         return item;
       });
     });
+  };
+
+  const onEmptyCorralClick = () => {
+    setSlots((prevState) => prevState.map((item) => false));
   };
 
   return (
@@ -58,7 +62,12 @@ const Corral = ({ corralCount }) => {
         >
           Add Kitty
         </button>
-        {slots.every((item) => item) && <p>The Kitty Corral is full.</p>}
+        {slots.every((item) => item) && (
+          <>
+            <p>The Kitty Corral is full.</p>
+            <button onClick={onEmptyCorralClick}>Empty Corral</button>
+          </>
+        )}
       </section>
     </div>
   );
