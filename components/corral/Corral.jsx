@@ -56,7 +56,7 @@ const Corral = ({ corralCount }) => {
         <div>{corralSpaces.map((space) => space)}</div>
         <button
           onClick={onAddKittyClick}
-          disabled={corralSpaces.every((space) => space)}
+          disabled={corralSpaces.every((space) => space.props.children)}
         >
           Add Kitty
         </button>
