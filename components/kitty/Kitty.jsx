@@ -2,18 +2,23 @@ import Image from 'next/image';
 import { useState } from 'react';
 import styles from './Kitty.module.css';
 
-const Kitty = ({ occupied }) => {
-  const [occupyHere, setOccupyHere] = useState(true);
+const Kitty = ({ occupied, i, setCorralSpaces }) => {
+  const [visible, setVisible] = useState(occupied);
 
-  const onOccupyHereClick = () => {
-    setOccupyHere(false);
+  const onVisibleClick = () => {
+    console.log('I: ', i);
+    setVisible(false);
+    setCorralSpaces((prevState) =>
+      prevState.map((space) => {
+        prevState[i] = false;
+        return space;
+      })
+    );
   };
+
   return (
-    <div
-      className={styles.Kitty}
-      // onClick={onOccupyHereClick}
-    >
-      {occupyHere && (
+    <div className={styles.Kitty} onClick={onVisibleClick}>
+      {visible && (
         <Image
           src="https://placekitten.com/100/100"
           alt="kitten"
