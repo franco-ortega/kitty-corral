@@ -68,7 +68,7 @@ const Corral = ({ corralCount }) => {
   };
 
   const onEmptyCorralClick = () => {
-    setCorralSpaces((prevState) => prevState.map((item) => false));
+    // setCorralSpaces((prevState) => prevState.map((item) => false));
   };
 
   console.log(corralSpaces);
