@@ -55,10 +55,11 @@ const Corral = ({ corralCount }) => {
           Add Kitty
         </button>
         {corralSpaces.every((space) => space.props?.children) && (
-          <>
-            <p>The Kitty Corral is full.</p>
-            <button onClick={onEmptyCorralClick}>Empty Corral</button>
-          </>
+          <p>The Kitty Corral is full.</p>
+        )}
+        <p>Click on a Kitty to remove it.</p>
+        {corralSpaces.every((space) => space.props?.children) && (
+          <button onClick={onEmptyCorralClick}>Empty Corral</button>
         )}
         <div>
           <Link href="/">Return Home</Link>
