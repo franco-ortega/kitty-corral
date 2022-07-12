@@ -8,10 +8,6 @@ const Corral = ({ corralCount }) => {
   const [corralSpaces, setCorralSpaces] = useState([]);
 
   useEffect(() => {
-    // const corralSpacesCreated = [];
-    // for (let i = 0; i < corralCount; i++) {
-    //   corralSpacesCreated.push(false);
-    // }
     const corralSpacesCreated = [];
     for (let i = 0; i < corralCount; i++) {
       corralSpacesCreated.push(<CorralSpace key={i} />);
@@ -23,42 +19,16 @@ const Corral = ({ corralCount }) => {
     console.log('add one kitty');
     setCorralSpaces((prevState) => {
       return prevState.map((corralSpace, i) => {
-        if (prevState[i - 1] === undefined) {
+        if (
+          !prevState[i - 1] ||
+          (prevState[i - 1].props.children &&
+            !prevState[i + 1]?.props.children) ||
+          (prevState[i - 1].props.children && !prevState[i + 1])
+        ) {
           console.log('A');
           return (
             <CorralSpace key={i}>
-              <Kitty
-                occupied={corralSpace}
-                i={i}
-                setCorralSpaces={setCorralSpaces}
-              />
-            </CorralSpace>
-          );
-        }
-        if (
-          prevState[i - 1].props.children &&
-          !prevState[i + 1]?.props.children
-        ) {
-          console.log('B');
-          return (
-            <CorralSpace key={i}>
-              <Kitty
-                occupied={corralSpace}
-                i={i}
-                setCorralSpaces={setCorralSpaces}
-              />
-            </CorralSpace>
-          );
-        }
-        if (prevState[i - 1].props.children && prevState[i + 1] === undefined) {
-          console.log('C');
-          return (
-            <CorralSpace key={i}>
-              <Kitty
-                occupied={corralSpace}
-                i={i}
-                setCorralSpaces={setCorralSpaces}
-              />
+              <Kitty i={i} setCorralSpaces={setCorralSpaces} />
             </CorralSpace>
           );
         }
@@ -68,7 +38,9 @@ const Corral = ({ corralCount }) => {
   };
 
   const onEmptyCorralClick = () => {
-    setCorralSpaces((prevState) => prevState.map((item, i) => <CorralSpace key={i} />));
+    setCorralSpaces((prevState) =>
+      prevState.map((item, i) => <CorralSpace key={i} />)
+    );
   };
 
   console.log(corralSpaces);

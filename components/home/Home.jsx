@@ -13,6 +13,7 @@ const Home = ({ setCorralCount }) => {
       <p>Select the number of spaces in your corral.</p>
       <form onSubmit={onCorralCountSubmit}>
         <input
+          required
           placeholder="0"
           type="number"
           min="0"
