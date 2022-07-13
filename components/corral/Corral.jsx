@@ -17,22 +17,18 @@ const Corral = ({ corralCount }) => {
 
   const onAddKittyClick = () => {
     setCorralSpaces((prevState) => {
-      let length = 0;
-
-      prevState.find((corralSpace, i) => {
-        if (!corralSpace.props.children) {
-          length = i;
-          return corralSpace;
-        }
-      });
+      const firstEmptySpace = prevState.findIndex(
+        (corralSpace) => !corralSpace.props.children
+      );
 
       return prevState.map((corralSpace, i) => {
-        if (i === length)
-          return (
+        if (i === firstEmptySpace) {
+          corralSpace = (
             <CorralSpace key={i}>
               <Kitty position={i} setCorralSpaces={setCorralSpaces} />
             </CorralSpace>
           );
+        }
         return corralSpace;
       });
     });
