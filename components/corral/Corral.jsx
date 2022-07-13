@@ -36,27 +36,26 @@ const Corral = ({ corralCount }) => {
 
   const onEmptyCorralClick = () => {
     setCorralSpaces((prevState) =>
-      prevState.map((space, i) => space = <CorralSpace key={i} />)
+      prevState.map((space, i) => (space = <CorralSpace key={i} />))
     );
   };
+
+  const fullCorral = corralSpaces.every((space) => space.props.children);
 
   return (
     <div className={styles.Corral}>
       <section>
         <div>{corralSpaces.map((space) => space)}</div>
-        <button
-          onClick={onAddKittyClick}
-          disabled={corralSpaces.every((space) => space.props.children)}
-        >
-          Add Kitty
-        </button>
-        {corralSpaces.every((space) => space.props?.children) && (
-          <p>The Kitty Corral is full.</p>
-        )}
+        <div>
+          <button onClick={onAddKittyClick} disabled={fullCorral}>
+            Add Kitty
+          </button>
+          <button onClick={onEmptyCorralClick} disabled={!fullCorral}>
+            Empty Corral
+          </button>
+        </div>
         <p>Click on a Kitty to remove it.</p>
-        {corralSpaces.every((space) => space.props?.children) && (
-          <button onClick={onEmptyCorralClick}>Empty Corral</button>
-        )}
+        {fullCorral && <p>The Kitty Corral is full.</p>}
         <div>
           <Link href="/">Return Home</Link>
         </div>
