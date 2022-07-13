@@ -30,7 +30,7 @@ const Corral = ({ corralCount }) => {
         if (i === length)
           return (
             <CorralSpace key={i}>
-              <Kitty i={i} setCorralSpaces={setCorralSpaces} />
+              <Kitty position={i} setCorralSpaces={setCorralSpaces} />
             </CorralSpace>
           );
         return corralSpace;
