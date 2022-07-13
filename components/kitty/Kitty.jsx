@@ -2,11 +2,11 @@ import Image from 'next/image';
 import CorralSpace from '../CorralSpace/CorralSpace';
 import styles from './Kitty.module.css';
 
-const Kitty = ({ i, setCorralSpaces }) => {
+const Kitty = ({ position, setCorralSpaces }) => {
   const onRemoveKittyClick = () => {
     setCorralSpaces((prevState) =>
       prevState.map((space, index) => {
-        if (i === index) space = <CorralSpace key={i} />;
+        if (index === position) space = <CorralSpace key={index} />;
         return space;
       })
     );
