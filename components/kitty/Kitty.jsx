@@ -3,18 +3,17 @@ import CorralSpace from '../CorralSpace/CorralSpace';
 import styles from './Kitty.module.css';
 
 const Kitty = ({ i, setCorralSpaces }) => {
-  const onVisibleClick = () => {
-    console.log('I: ', i);
+  const onRemoveKittyClick = () => {
     setCorralSpaces((prevState) =>
-      prevState.map((space) => {
-        prevState[i] = <CorralSpace key={i} />;
+      prevState.map((space, index) => {
+        if (i === index) space = <CorralSpace key={i} />;
         return space;
       })
     );
   };
 
   return (
-    <div className={styles.Kitty} onClick={onVisibleClick}>
+    <div className={styles.Kitty} onClick={onRemoveKittyClick}>
       <Image
         src="https://placekitten.com/100/100"
         alt="kitten"
