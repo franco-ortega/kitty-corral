@@ -36,7 +36,7 @@ const Corral = ({ corralCount }) => {
 
   const onEmptyCorralClick = () => {
     setCorralSpaces((prevState) =>
-      prevState.map((space, i) => <CorralSpace key={i} />)
+      prevState.map((space, i) => space = <CorralSpace key={i} />)
     );
   };
 
