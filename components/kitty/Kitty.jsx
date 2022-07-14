@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import CorralSpace from '../CorralSpace/CorralSpace';
+import createName from '../../utils/createName';
+import names from '../../data/names.json';
 import styles from './Kitty.module.css';
 
 const Kitty = ({ position, setCorralSpaces }) => {
@@ -12,6 +14,8 @@ const Kitty = ({ position, setCorralSpaces }) => {
     );
   };
 
+  const kittyName = createName(names);
+
   return (
     <div className={styles.Kitty} onClick={onRemoveKittyClick}>
       <Image
@@ -20,6 +24,7 @@ const Kitty = ({ position, setCorralSpaces }) => {
         width="100"
         height="100"
       />
+      {kittyName}
     </div>
   );
 };
