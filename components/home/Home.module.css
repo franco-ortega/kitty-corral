@@ -10,6 +10,18 @@
   /* gap: 1rem; */
 }
 
+.Home span {
+  display: inline-block;
+  background-color: aliceblue;
+  transform: scale(-1, 1);
+
+  font-size: 4rem;
+}
+
+.Home form + span {
+  transform: scale(1, 1);
+}
+
 .Home form {
   /* display: flex; */
   /* flex-direction: column; */

@@ -9,18 +9,24 @@ const Home = ({ setCorralCount }) => {
 
   return (
     <div className={styles.Home}>
-      <h2>Welcome!!</h2>
-      <p>Select the number of spaces in your corral.</p>
-      <form onSubmit={onCorralCountSubmit}>
-        <input
-          required
-          placeholder="0"
-          type="number"
-          min="0"
-          onChange={(e) => setCorralCount(e.target.value)}
-        />
-        <button>Submit</button>
-      </form>
+      <p>
+        Welcome!! Select the number of spaces to create your corral. Then, you
+        can start filling it with kitties!
+      </p>
+      <div>
+        <span>🐈‍⬛</span>
+        <form onSubmit={onCorralCountSubmit}>
+          <input
+            required
+            placeholder="0"
+            type="number"
+            min="0"
+            onChange={(e) => setCorralCount(e.target.value)}
+          />
+          <button>Submit</button>
+        </form>
+        <span>🐈</span>
+      </div>
     </div>
   );
 };
