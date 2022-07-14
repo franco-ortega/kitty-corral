@@ -1,0 +1,10 @@
+.Nav {
+    /* display: flex; */
+    flex-direction: row;
+
+    outline: 1px solid white;
+}
+
+.Nav li {
+    margin-inline: auto;
+}
