@@ -1,45 +1,45 @@
 .Corral {
   background-color: orange;
-  border: 1rem solid lightblue;
+  /* border: 1rem solid lightblue; */
 
-  padding: 2rem;
+  /* padding: 2rem; */
 
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   gap: 2rem;
 }
 
 .Corral section {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
+  /* gap: 0.5rem; */
 }
 
 .Corral section > div {
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
+  /* width: fit-content; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  /* gap: 1rem; */
 }
 
 .Corral button {
-  border-radius: 5px;
-  padding: 0.25rem 0.5rem;
+  /* border-radius: 5px; */
+  /* padding: 0.25rem 0.5rem; */
 }
 
 .Corral a {
-  border: 1px solid blue;
-  background-color: blue;
-  border-radius: 5px;
-  padding: 0.25rem 0.5rem;
-  color: yellow;
-  transition: 500ms;
+  /* border: 1px solid blue; */
+  /* background-color: blue; */
+  /* border-radius: 5px; */
+  /* padding: 0.25rem 0.5rem; */
+  /* color: yellow; */
+  /* transition: 500ms; */
 }
 
 .Corral a:hover {
-  background-color: transparent;
-  color: black;
+  /* background-color: transparent; */
+  /* color: black; */
 }
