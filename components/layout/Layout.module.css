@@ -1,4 +1,14 @@
 .Layout {
   height: 100vh;
   overflow: auto;
+
+  background-image: linear-gradient(
+    180deg,
+    hsl(60, 56%, 91%),
+    hsl(48, 50%, 80%),
+    hsl(34, 44%, 69%),
+    hsl(25, 48%, 62%),
+    hsl(17, 53%, 55%),
+    hsl(12, 54%, 52%)
+  );
 }
