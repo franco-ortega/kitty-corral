@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import CorralSpace from '../corralSpace/CorralSpace';
+import CorralSpace from '../CorralSpace/CorralSpace';
 import Kitty from '../kitty/Kitty';
 import styles from './Corral.module.css';
 
