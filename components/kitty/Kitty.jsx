@@ -18,13 +18,15 @@ const Kitty = ({ position, setCorralSpaces }) => {
 
   return (
     <div className={styles.Kitty} onClick={onRemoveKittyClick}>
-      <Image
-        src="https://placekitten.com/100/100"
-        alt="kitten"
-        width="100"
-        height="100"
-      />
-      {kittyName}
+      <div>
+        <Image
+          src="https://placekitten.com/100/100"
+          alt="kitten"
+          width="100"
+          height="100"
+        />
+      </div>
+      <p>{kittyName}</p>
     </div>
   );
 };
