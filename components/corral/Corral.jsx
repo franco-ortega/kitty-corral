@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import CorralSpace from '../CorralSpace/CorralSpace';
+import CorralSpace from '../corralSpace/CorralSpace';
 import Kitty from '../kitty/Kitty';
 import styles from './Corral.module.css';
 
@@ -44,22 +44,22 @@ const Corral = ({ corralCount }) => {
 
   return (
     <div className={styles.Corral}>
-      <section>
-        <div>{corralSpaces.map((space) => space)}</div>
-        <div>
-          <button onClick={onAddKittyClick} disabled={fullCorral}>
-            Add Kitty
-          </button>
-          <button onClick={onEmptyCorralClick} disabled={!fullCorral}>
-            Empty Corral
-          </button>
-        </div>
-        <p>Click on a Kitty to remove it.</p>
+      <div>
+        <button onClick={onAddKittyClick} disabled={fullCorral}>
+          Add Kitty
+        </button>
+        <p>Click a kitty to remove it.</p>
+      </div>
+
+      <div>
+        <button onClick={onEmptyCorralClick} disabled={!fullCorral}>
+          Empty Corral
+        </button>
+
         {fullCorral && <p>The Kitty Corral is full.</p>}
-        <div>
-          <Link href="/">Return Home</Link>
-        </div>
-      </section>
+      </div>
+
+      <ul>{corralSpaces.map((space) => space)}</ul>
     </div>
   );
 };

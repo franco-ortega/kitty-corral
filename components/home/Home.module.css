@@ -1,13 +1,27 @@
 .Home {
-  background-color: beige;
+  width: 90%;
+  max-width: 45ch;
   margin-inline: auto;
-  padding: 1rem;
-  max-width: 20rem;
+  
+  font-size: 1.25rem;
+  /* outline: 1px solid green; */
+}
 
+.Home div {
+  margin-top: 3rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-evenly;
+}
+
+.Home span {
+  transform: scale(-1, 1);
+  font-size: 6rem;
+}
+
+.Home form + span {
+  transform: scale(1, 1);
 }
 
 .Home form {
@@ -18,11 +32,15 @@
 }
 
 .Home input {
-  width: 3rem;
-  text-align: center;
-  /* opacity: 50%; */
+  border-radius: .25rem;
+  background-color: hsl(0, 0%, 95%);
+  width: 4rem;
+  padding: 0.1rem 0.25rem;
+  font-size: 1.75rem;
 }
 
 .Home button {
-  padding: .1rem;
+  border-radius: .25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.25rem;
 }

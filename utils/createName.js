@@ -4,8 +4,14 @@ const getName = (names) => {
 };
 
 const createName = (names) => {
-  const firstName = getName(names);
-  const lastName = getName(names);
+  let firstName = '';
+  let lastName = '';
+
+  do {
+    firstName = getName(names);
+    lastName = getName(names);
+  } while (`${firstName} ${lastName}`.length > 12);
+
   return `${firstName} ${lastName}`;
 };
 

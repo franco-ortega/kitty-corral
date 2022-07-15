@@ -1,0 +1,12 @@
+.Nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+
+  /* outline: 1px solid blue; */
+}
+
+.Nav a:hover {
+    color: hsl(0, 59%, 45%);
+}

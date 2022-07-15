@@ -1,0 +1,12 @@
+.Header {
+    margin: 1.5rem 1rem;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    color: hsl(0, 59%, 25%);
+    font-size: 1.15rem;
+    
+    /* outline: 1px solid black; */
+}
