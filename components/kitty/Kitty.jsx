@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import CorralSpace from '../CorralSpace/CorralSpace';
+import CorralSpace from '../corralSpace/CorralSpace';
 import createName from '../../utils/createName';
 import names from '../../data/names.json';
 import styles from './Kitty.module.css';

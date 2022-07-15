@@ -1,11 +1,14 @@
 .CorralSpace {
-    background-color: hsl(210, 51%, 35%);
-    /* width: 6rem; */
-    /* aspect-ratio: 1; */
+    /* background-color: hsl(210, 51%, 35%); */
+    border: .075rem solid green;
+    border-radius: 1rem;
+    width: 6rem;
+    aspect-ratio: 1;
   
-    /* display: flex; */
+    display: flex;
     /* flex-direction: row; */
     /* align-items: center; */
     /* justify-content: center; */
+
   }
   
