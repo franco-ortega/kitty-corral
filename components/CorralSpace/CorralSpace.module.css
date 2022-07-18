@@ -1,5 +1,4 @@
 .CorralSpace {
-  /* background-color: hsl(210, 51%, 35%); */
   border: 0.075rem solid green;
   border-radius: 1rem;
   width: 9.5rem;
@@ -8,7 +7,7 @@
   padding: 0.25rem;
 
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }

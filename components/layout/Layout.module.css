@@ -12,3 +12,11 @@
     hsl(12, 54%, 52%)
   );
 }
+
+.Layout main {
+  width: 20rem;
+  /* max-width: 45ch; */
+  margin-inline: auto;
+
+  font-size: 1.25rem;
+}

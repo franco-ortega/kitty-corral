@@ -1,8 +1,6 @@
 .Kitty {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  aspect-ratio: 1;
 
   /* outline: 1px solid red; */
 }

@@ -13,8 +13,13 @@ body {
 }
 
 a {
-  color: inherit;
+  color: hsl(300, 100%, 25%);
   text-decoration: none;
+}
+
+a:hover {
+  color: hsl(300, 100%, 20%);
+  text-decoration: underline;
 }
 
 li {

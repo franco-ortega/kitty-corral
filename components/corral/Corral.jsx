@@ -48,15 +48,16 @@ const Corral = ({ corralCount }) => {
         <button onClick={onAddKittyClick} disabled={fullCorral}>
           Add Kitty
         </button>
-        <p>Click a kitty to remove it.</p>
       </div>
+
+      <div>Click on a kitty to remove it.</div>
 
       <div>
         <button onClick={onEmptyCorralClick} disabled={!fullCorral}>
           Empty Corral
         </button>
 
-        {fullCorral && <p>The Kitty Corral is full.</p>}
+        {fullCorral && <p>The corral is full.</p>}
       </div>
 
       <ul>{corralSpaces.map((space) => space)}</ul>
