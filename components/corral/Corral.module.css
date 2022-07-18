@@ -3,9 +3,7 @@
   /* flex-direction: row; */
   align-items: center;
   justify-content: space-between;
-  font-size: 1.25rem;
-  /* width: 20rem; */
-  outline: 1px solid yellow;
+  /* outline: 1px solid yellow; */
 }
 
 .Corral div + div {
@@ -23,23 +21,8 @@
 }
 
 .Corral button {
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   /* margin-left: 1rem; */
   padding: 0.25rem 0.5rem;
   font-size: 1.25rem;
-}
-
-
-.Corral a {
-  /* border: 1px solid blue; */
-  /* background-color: blue; */
-  /* border-radius: 5px; */
-  /* padding: 0.25rem 0.5rem; */
-  /* color: yellow; */
-  /* transition: 500ms; */
-}
-
-.Corral a:hover {
-  /* background-color: transparent; */
-  /* color: black; */
 }
