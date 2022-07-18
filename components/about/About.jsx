@@ -53,7 +53,7 @@ const About = () => {
           rel="noreferrer"
         >
           GitHub repo for Kitty Corral
-        </a>
+        </a>.
       </p>
     </div>
   );
