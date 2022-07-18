@@ -29,14 +29,17 @@ const About = () => {
         >
           freeCodeCamp
         </a>
-        . My implementation does not follow the approach outlined in the
-        article, but that is where I got the idea to build an app that
-        dynamically generates a number of empty spaces where each empty space
-        can be filled one at a time with a single item by clicking a single
-        button, and each item can be removed individually by clicking on the
-        item itself, which results in the space becoming empty again.
-        Additionally, I added a button that can empty all the spaces at once if
-        all the spaces have been filled.
+        .
+      </p>
+      <p>
+        My implementation does not follow the approach outlined in the article,
+        but that is where I got the idea to build an app that dynamically
+        generates a number of empty spaces where each empty space can be filled
+        one at a time with a single item by clicking a single button, and each
+        item can be removed individually by clicking on the item itself, which
+        results in the space becoming empty again. Additionally, I added a
+        button that can empty all the spaces at once if all the spaces have been
+        filled.
       </p>
       <p>
         This app was built with{' '}
