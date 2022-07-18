@@ -1,18 +1,11 @@
-.Corral {
-  width: 90%;
-  max-width: 45ch;
-  margin-inline: auto;
-
-  font-size: 1.25rem;
-  /* outline: 1px solid yellow */
-}
-
 .Corral div {
   display: flex;
   /* flex-direction: row; */
   align-items: center;
   justify-content: space-between;
   font-size: 1.25rem;
+  width: 20rem;
+  outline: 1px solid yellow;
 }
 
 .Corral div + div {
@@ -31,6 +24,7 @@
 
 .Corral button {
   border-radius: .25rem;
+  /* margin-left: 1rem; */
   padding: 0.25rem 0.5rem;
   font-size: 1.25rem;
 }
